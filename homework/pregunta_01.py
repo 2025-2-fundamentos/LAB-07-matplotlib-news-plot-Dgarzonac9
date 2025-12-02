@@ -98,6 +98,12 @@ def pregunta_01():
     # Crear directorio si no existe
     os.makedirs("files/plots", exist_ok=True)
 
+    plt.xticks(
+        ticks=df.index,
+        labels=df.index,
+        ha="center",
+    )
+    
     plt.tight_layout()
     plt.savefig("files/plots/news.png")
     plt.show()
